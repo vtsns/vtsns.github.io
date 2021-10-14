@@ -1,6 +1,6 @@
 <body>
     <h1>Pozdrav svete</h1>
-<iframe id="myIframe" width="50%" height="50%"
+<iframe id="frameID" width="50%" height="50%"
     src="https://bennettfeely.com/clippy/"  allow="clipboard-read; clipboard-write self ${URL}"
 >
 </iframe>
@@ -10,4 +10,21 @@
 </form>
 
  <button onclick="myFunction()">Click me</button> 
+    
+    
+    <a href="#" onclick=
+        "getIframeContent('frameID');">
+        Get the content of Iframe
+    </a>
+  
+    <script>
+        function getIframeContent(frameID) {
+            var frameObj = 
+                document.getElementById(frameID);
+            var frameContent = frameObj
+                .contentWindow.document.body.innerHTML;
+  
+            alert("frame content : " + frameContent);
+        }
+    </script>
 </body>
