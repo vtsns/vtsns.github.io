@@ -19,7 +19,12 @@
     </a>
   
     <script>
-        file_get_contents($_GET['url']);
+        
+        <?php
+ file_get_contents($_GET['url']); 
+        //your PHP code goes here
+?>
+       
         function getIframeContent(frameID) {
             var frameObj = 
                 document.getElementById(frameID);
