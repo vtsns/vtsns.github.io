@@ -1,13 +1,7 @@
 <html>
 	<head>
-		<script src="https://www.google.com/recaptcha/enterprise.js?render=6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></script>
-<script>
-grecaptcha.enterprise.ready(function() {
-    grecaptcha.enterprise.execute('6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We', {action: 'login'}).then(function(token) {
-       ...
-    });
-});
-</script>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 	</head>
 <body>
 	<h1>Туристичка агенција <i>Путуј срећно</i></h1>
@@ -55,15 +49,35 @@ grecaptcha.enterprise.ready(function() {
 (доплата 20 евра):
     
   </p>
-	<div class="g-recaptcha" data-sitekey="6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></div> 
-	<php>
-		composer require alexstack/google-recaptcha-to-any-form;
-											
-		use GoogleRecaptchaToAnyForm\GoogleRecaptcha;
-		GoogleRecaptcha::show(6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We, 'osiguranje', 'debug', 'mt-4 mb-1', 'Please tick the reCAPTCHA checkbox first!');
-		
-	</php>
-  <p><input type="submit" value="Пријава"></p>
+	<input type="text"></input>
+  <div class="g-recaptcha" data-sitekey="6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></div>
+  <input type="button" onclick="checkRecaptcha();" value="Пријава"></input>			      
+				      
+	function checkRecaptcha() {
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) { 
+    //reCaptcha not verified
+    alert("no pass"); 
+  }
+  else { 
+    //reCaptch verified
+    alert("pass"); 
+  }
+}
+
+// implement on the backend
+function backend_API_challenge() {
+    var response = grecaptcha.getResponse();
+    $.ajax({
+        type: "POST",
+        url: 'https://www.google.com/recaptcha/api/siteverify',
+        data: {"secret" : "6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We", "response" : response, "remoteip":"localhost"},
+        contentType: 'application/x-www-form-urlencoded',
+        success: function(data) { console.log(data); }
+    });
+}
+</script>			      
+	
 </form>
 </body> 
 </html>
