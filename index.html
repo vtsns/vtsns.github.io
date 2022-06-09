@@ -1,38 +1,48 @@
 <body>
-    <h1>Pozdrav svete</h1>
-    <h2>Pozdrav!!!!!!!!!!!!</h2>
-<iframe id="frameID" width="50%" height="50%"
-    src="https://vtsns.github.io/?url=https://bennettfeely.com/clippy"  allow="clipboard-read; clipboard-write self ${URL}"
->
-</iframe>
-
+    <h1>Регистрациони формулар за пријаву за наградно путовање </h1>
+<p>Наша туристичка агенција организује наградну игру. Сви који желе да учествују
+ у наградној игри треба да попуне формулар са жељеном дестинацијом путовања.
+ Срећни добитник који буде извучен, отпутоваће бесплатно на дестинацију коју је 
+изабрао путем овог формулара! Желимо вам пуно среће. 
+</p>
 <form>
-<input type="text">
-</form>
+  <h2>Подаци о учеснику у наградној игри:</h2>
+   Име и презиме:<br>
+    <input type="text"><br>
+   Емаил:<br>
+    <input type="text"><br>
+	Корисничко име:<br>
+    <input type="text"><br>
+	Изаберите шифру:<br>
+	<input type="password"><br>
+	Поновите шифру:<br>
+	<input type="password"><br>
+  </p>
+ 
+   <h2>Лични подаци:</h2>
+    <p>Године старости: (Максималан дозвољен унос 2 карактера)
+    <input type="text" size="2" maxlength="3"><br>
+	Пол:<br>
+    <input type="radio" name="pol">Мушки
+	<input type="radio" name="pol">Женски<br>
+    Уколико имате неких посебних захтева у вези исхране
+	(вегетеријанство, веганство, алергије), молимо вас да их наведете.<br></p>
+    <textarea></textarea>
 
- <button onclick="myFunction()">Click me</button> 
+  <p>Изаберите омиљену дестинацију:<br>
+  <select>
+  <option>---</option>
+  <option>Халкидики</option>
+  <option>Париз</option>
+  <option>Санкт Петерсбург</option>
+  <option>Александрија</option>
+  <option>Дубаи</option>
+  </select></p> 
+<p>
+   <input type="checkbox" checked> Желим додатно здравствено осигурање за време боравка у инсотранству 
+(доплата 20 евра):
     
-    
-    <a href="#" onclick=
-        "getIframeContent('frameID');">
-        Get the content of Iframe
-    </a>
-  
-    <script>
-        
-        <?php
- file_get_contents($_GET['url']); 
-        echo "Hello world!<br>";
-        //your PHP code goes here
-?>
-       
-        function getIframeContent(frameID) {
-            var frameObj = 
-                document.getElementById(frameID);
-            var frameContent = frameObj
-                .contentWindow.document.body.innerHTML;
-  
-            alert("frame content : " + frameContent);
-        }
-    </script>
+  </p>
+  <p><input type="submit" value="Пријава"></p>
+</form>
 </body>
