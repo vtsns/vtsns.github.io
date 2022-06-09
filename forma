@@ -56,7 +56,7 @@ grecaptcha.enterprise.ready(function() {
     
   </p>
 	<div class="g-recaptcha" data-sitekey="6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></div> 
-	6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We
+	
   <p><input type="submit" value="Пријава"></p>
 </form>
 </body> 
