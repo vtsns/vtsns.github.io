@@ -51,12 +51,16 @@ grecaptcha.enterprise.ready(function() {
   <option>Дубаи</option>
   </select></p> 
 <p>
-   <input type="checkbox" checked> Желим додатно здравствено осигурање за време боравка у инсотранству 
+   <input type="checkbox" checked id="osiguranje'> Желим додатно здравствено осигурање за време боравка у инсотранству 
 (доплата 20 евра):
     
   </p>
 	<div class="g-recaptcha" data-sitekey="6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></div> 
-	GoogleRecaptcha::show($SiteKey, 'Form_ContactForm_Message', 'no_debug', 'mt-4 mb-1', 'Please tick the reCAPTCHA checkbox first!');
+	<php>
+		use GoogleRecaptchaToAnyForm\GoogleRecaptcha;
+		GoogleRecaptcha::show(6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We, 'osiguranje', 'debug', 'mt-4 mb-1', 'Please tick the reCAPTCHA checkbox first!');
+		
+	</php>
   <p><input type="submit" value="Пријава"></p>
 </form>
 </body> 
