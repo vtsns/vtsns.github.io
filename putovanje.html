@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc2RVggAAAAAGsjoY3odtmuW91N3TKkxFGP22U5"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6Lc2RVggAAAAAGsjoY3odtmuW91N3TKkxFGP22U5', {action: 'login'}).then(function(token) {
+       ...
+    });
+});
+</script>
+	</head>
+<body>
+	<h1>Туристичка агенција Путуј срећно</h1>
+<h2>Регистрациони формулар за пријаву за наградно путовање </h2>
+<p>Наша туристичка агенција организује наградну игру. Сви који желе да учествују
+ у наградној игри треба да попуне формулар са жељеном дестинацијом путовања.
+ Срећни добитник који буде извучен, отпутоваће бесплатно на дестинацију коју је 
+изабрао путем овог формулара! Желимо вам пуно среће. 
+</p>
+<form>
+  <h2>Подаци о учеснику у наградној игри:</h2>
+   Име и презиме:<br>
+    <input type="text"><br>
+   Емаил:<br>
+    <input type="text"><br>
+	Корисничко име:<br>
+    <input type="text"><br>
+	Изаберите шифру:<br>
+	<input type="password"><br>
+	Поновите шифру:<br>
+	<input type="password"><br>
+  </p>
+ 
+   <h2>Лични подаци:</h2>
+    <p>Године старости: (Максималан дозвољен унос 2 карактера)
+    <input type="text" size="2" maxlength="3"><br>
+	Пол:<br>
+    <input type="radio" name="pol">Мушки
+	<input type="radio" name="pol">Женски<br>
+    Уколико имате неких посебних захтева у вези исхране
+	(вегетеријанство, веганство, алергије), молимо вас да их наведете.<br></p>
+    <textarea></textarea>
+
+  <p>Изаберите омиљену дестинацију:<br>
+  <select>
+  <option>---</option>
+  <option>Халкидики</option>
+  <option>Париз</option>
+  <option>Санкт Петерсбург</option>
+  <option>Александрија</option>
+  <option>Дубаи</option>
+  </select></p> 
+<p>
+   <input type="checkbox" checked> Желим додатно здравствено осигурање за време боравка у инсотранству 
+(доплата 20 евра):
+    
+  </p>
+	<div class="g-recaptcha" data-sitekey="6Lc2RVggAAAAAGsjoY3odtmuW91N3TKkxFGP22U5"></div> 
+  <p><input type="submit" value="Пријава"></p>
+</form>
+</body> 
+</html>
