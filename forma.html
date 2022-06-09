@@ -57,6 +57,8 @@ grecaptcha.enterprise.ready(function() {
   </p>
 	<div class="g-recaptcha" data-sitekey="6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We"></div> 
 	<php>
+		composer require alexstack/google-recaptcha-to-any-form;
+											
 		use GoogleRecaptchaToAnyForm\GoogleRecaptcha;
 		GoogleRecaptcha::show(6LfQGFcgAAAAADCXe9RWYbq2eKMt1FIOLh9VN_We, 'osiguranje', 'debug', 'mt-4 mb-1', 'Please tick the reCAPTCHA checkbox first!');
 		
