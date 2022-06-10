@@ -16,7 +16,7 @@ Please check the the captcha form.
 ';
           exit;
         }
-        $secretKey = "Put your secret key here";
+        $secretKey = "6Ld0AFkgAAAAAON2mMi-1Etzm1Uew4BrdAumdw4R";
         $ip = $_SERVER['REMOTE_ADDR'];
         // post request to server
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
