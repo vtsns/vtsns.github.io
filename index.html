@@ -1,48 +1,15 @@
-<body>
-    <h1>Регистрациони формулар за пријаву за наградно путовање </h1>
-<p>Наша туристичка агенција организује наградну игру. Сви који желе да учествују
- у наградној игри треба да попуне формулар са жељеном дестинацијом путовања.
- Срећни добитник који буде извучен, отпутоваће бесплатно на дестинацију коју је 
-изабрао путем овог формулара! Желимо вам пуно среће. 
-</p>
-<form>
-  <h2>Подаци о учеснику у наградној игри:</h2>
-   Име и презиме:<br>
-    <input type="text"><br>
-   Емаил:<br>
-    <input type="text"><br>
-	Корисничко име:<br>
-    <input type="text"><br>
-	Изаберите шифру:<br>
-	<input type="password"><br>
-	Поновите шифру:<br>
-	<input type="password"><br>
-  </p>
- 
-   <h2>Лични подаци:</h2>
-    <p>Године старости: (Максималан дозвољен унос 2 карактера)
-    <input type="text" size="2" maxlength="3"><br>
-	Пол:<br>
-    <input type="radio" name="pol">Мушки
-	<input type="radio" name="pol">Женски<br>
-    Уколико имате неких посебних захтева у вези исхране
-	(вегетеријанство, веганство, алергије), молимо вас да их наведете.<br></p>
-    <textarea></textarea>
-
-  <p>Изаберите омиљену дестинацију:<br>
-  <select>
-  <option>---</option>
-  <option>Халкидики</option>
-  <option>Париз</option>
-  <option>Санкт Петерсбург</option>
-  <option>Александрија</option>
-  <option>Дубаи</option>
-  </select></p> 
-<p>
-   <input type="checkbox" checked> Желим додатно здравствено осигурање за време боравка у инсотранству 
-(доплата 20 евра):
-    
-  </p>
-  <p><input type="submit" value="Пријава"></p>
-</form>
-</body>
+<html>
+  <head>
+    <title>Google recapcha demo - Codeforgeek</title>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+  </head>
+  <body>
+    <h1>Google reCAPTHA Demo</h1>
+    <form id="comment_form" action="form.php" method="post">
+      <input type="email" placeholder="Type your email" size="40"><br><br>
+      <textarea name="comment" rows="8" cols="39"></textarea><br><br>
+      <input type="submit" name="submit" value="Post comment"><br><br>
+      <div class="g-recaptcha" data-sitekey="6Ld0AFkgAAAAAHwJFSd6zk2oUApZPI7r1FfQnGR6"></div>
+    </form>
+  </body>
+</html>
