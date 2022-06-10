@@ -17,7 +17,8 @@ Please check the the captcha form.
           exit;
         }
         $secretKey = "6Ld0AFkgAAAAAON2mMi-1Etzm1Uew4BrdAumdw4R";
-        $ip = $_SERVER['REMOTE_ADDR'];
+       // $ip = $_SERVER['https://github.com/vtsns/vtsns.github.io/edit/main/form.php'];
+  $ip = $_SERVER['REMOTE_ADDR'];
         // post request to server
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
         $response = file_get_contents($url);
